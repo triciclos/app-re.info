@@ -60,10 +60,10 @@
 	</script>
 </head>
 
-<body>
+<body data-spy="scroll" data-target=".main-menu" data-offset="50" style="position: relative;">
 	<!-- start header Area -->
 	<header id="header">
-		<div class="container main-menu">
+		<nav id="main-menu" class="container main-menu">
 			<div class="row align-items-center justify-content-between d-flex">
 				<div id="logo">
 					<a href="index.html">
@@ -71,22 +71,22 @@
 						<img class="mobile-content" src="img/logos/re-logo-sm.png" alt="" title="" />
 					</a>
 				</div>
-				<nav id="nav-menu-container">
+				<nav id="nav-menu-container" class="nav-menu-container">
 					<ul class="nav-menu">
-						<li class="menu-active"><a href="index.html">Inicio</a></li>
-						<li><a href="#features">Genera tu Ticket</a></li>
-						<li><a href="#instagram">Instagram</a></li>
-						<!-- <li><a href="retorna.html"><img width="80px" src="img/logos/retorna-logo-yellow.png" alt=""></a></li> -->
-						<li><a href="https://triciclos.net/hable-con-nosotros/" target="_blank">¡Escríbenos!</a></li>
+						<li class="nav-menu-item home menu-active"><a href="#home">Inicio</a></li>
+						<li class="nav-menu-item registrate"><a href="#registrate">Registrate</a></li>
+						<li class="nav-menu-item prepara-tu-visita"><a href="#prepara-tu-visita">Prepara tu visita</a></li>
+						<li class="nav-menu-item valida-ticket"><a href="#valida-ticket">Valida tu ticket</a></li>
+						<li class="nav-menu-item "><a href="https://triciclos.net/hable-con-nosotros/" target="_blank">¡Contactanos!</a></li>
 					</ul>
 				</nav>
 			</div>
-		</div>
+		</nav>
 	</header>
 	<!-- end header Area -->
 
 	<!-- start banner Area -->
-	<section class="home-banner-area">
+	<section id="home" class="home-banner-area">
 		<div class="container">
 			<div class="row fullscreen d-flex align-items-center justify-content-between">
 				<div class="home-banner-content col-lg-6">
@@ -140,7 +140,7 @@
 	<!-- End banner Area -->
 
 	<!-- Start fact Area -->
-	<section class="fact-area">
+	<div class="fact-area">
 		<div class="container">
 			<div class="fact-box">
 				<div class="row align-items-center">
@@ -163,12 +163,12 @@
 				</div>
 			</div>
 		</div>
-	</section>
+	</div>
 	<!-- END FACT AREA -->
 
 	<!-- START GET YOUR TICKET AREA -->
-	<section class="about-area">
-		<div id="features" class="container">
+	<div class="about-area">
+		<div class="container">
 			<div class="row align-items-center">
 				<div class="registrate-section flex">
 					<!-- GENERA TU TICKET IMAGE -->
@@ -176,7 +176,7 @@
 						<img class="phone_photo" src="img/fotos_celulares/mockup-2.png" alt="">
 					</div>
 					<!-- GENERA TU TICKET CONTENT -->
-					<div class="container offset-lg-1 col-lg-9 home-about-left p-5 mt-5">
+					<section id="registrate" class="container offset-lg-1 col-lg-9 home-about-left p-5 mt-5">
 						<div class="row mb-3">
 							<h1>
 								Regístrate
@@ -207,9 +207,9 @@
 								<p class="m-0">¡Todo listo, ya eres parte de la comunidad!</p>
 							</div>
 						</div>
-					</div>
+					</section>
 				</div>
-				<div class="prepara-visita-section flex">
+				<section id="prepara-tu-visita" class="prepara-visita-section flex">
 					<!-- MUESTRA TU CODIGO CONTENT -->
 					<div class="col-lg-8 home-about-right home-about-right p-5 text-right"
 						style="margin-bottom: 200px;">
@@ -227,14 +227,15 @@
 					<div class="pl-5 ml-5 col-lg-4 home-about-right desktop-content">
 						<img class="phone_photo" src="img/fotos_celulares/mockup-3.png" alt="">
 					</div>
-				</div>
+				</section>
 				<!-- CALIFICA TU EXPERIENCIA IMAGE -->
-				<div class="col-lg-5 home-about-right desktop-content">
+
+				<section id="valida-ticket" class="col-lg-5 home-about-right desktop-content">
 					<h1 style="translate: -100px;">
 						Valida tu ticket de visita
 					</h1>
 					<img class="phone_photo" style="translate:-170px" src="img/fotos_celulares/mockup-4.png" alt="">
-				</div>
+				</section>
 
 				<!-- CALIFICA TU EXPERIENCIA CONTENT -->
 				<div class="container col-lg-6 home-about-left" style="margin-top: 140px;margin-left: 30px!important;">
@@ -274,11 +275,11 @@
 				</div>
 			</div>
 		</div>
-	</section>
+	</div>
 	<!-- END GET YOUR TICKET AREA -->
 
 	<!-- START "Será Reciclable" AREA -->
-	<div class="about-area">
+	<section class="about-area">
 		<h1>¿Será reciclable o no? 🤔</h1>
 		<br>
 		<p>La App Re te ayuda a resolver dudas sobre la reciclabilidad de los<br>residuos en 2 simples pasos:</p>
@@ -294,7 +295,7 @@
 		<div class="desktop-content text-center">
 			<img class="phone_photo" src="img/fotos_celulares/mockup-5.png" alt="">
 		</div>
-	</div>
+	</section>
 	<!-- END "Será Reciclable" AREA -->
 
 	<!-- START GET YOUR TICKET AREA -->
@@ -522,11 +523,11 @@
 				<div class="col-lg-1 col-md-1 social-link">
 					<div class="" style="margin-bottom: 25%;">
 						<div style="display: flex;">
-							<i class="fa-brands fa-instagram"></i>
+							<p>✉️</p>
 							<p style="margin-bottom: 0px;">@App.re</p>
 						</div>
 						<div style="display: flex;">
-							<span>icono</span>
+							<p>📱</p>
 							<p style="margin-bottom: 0px;">appre.triciclos.cl</p>
 						</div>
 					</div>
@@ -550,8 +551,6 @@
 		crossorigin="anonymous"></script>
 	<script src="js/tilt.jquery.min.js"></script>
 	<script src="js/vendor/bootstrap.min.js"></script>
-	<script type="text/javascript"
-		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
 	<script src="js/easing.min.js"></script>
 	<script src="js/hoverIntent.js"></script>
 	<script src="js/superfish.min.js"></script>

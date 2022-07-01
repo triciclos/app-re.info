@@ -397,11 +397,37 @@ $(document).ready(function () {
         $('#mc_embed_signup').find('form').ajaxChimp();
     });
 
+    // $(document).ready(function () {
+ 
+    //         $('ul.nav-menu > li')
+    //                 .click(function (e) {
+    //             $('ul.nav-menu > li')
+    //                 .removeClass('active');
+    //             $(this).addClass('active');
+    //         });
+    //     });
 
+    const sections = document.querySelectorAll("section");
+    const navLi = document.querySelectorAll("nav .nav-menu-container ul li");
 
-
-
-
-
-
+    window.onscroll = () => {
+        var current = "";
+        
+        sections.forEach((section) => {
+            const sectionTop = section.offsetTop;
+            if (scrollY >= sectionTop + 300) {
+                current = section.getAttribute("id"); }
+            if (scrollY < 300){
+                current = "home";
+            }
+        });
+        
+        navLi.forEach((li) => {
+            li.classList.remove("active");
+            if (li.classList.contains(current)) {
+                li.classList.add("active");
+            }
+        });
+        };
+          
 });
