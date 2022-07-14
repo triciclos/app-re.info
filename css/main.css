@@ -1708,11 +1708,12 @@ h1, h2, h3, h4, h5, h6 {
   width: 80%;
   transform: translate(12.5%, 20%);
   border-radius: 10px;
-  background-color: white;
+  background: linear-gradient(90deg, #4E80EE 130px, #FFFFFF 0, #FFFFFF 100%);
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .header-scrolled {
+  background: linear-gradient(90deg, #4E80EE 200px, #FFFFFF 0, #FFFFFF 100%)!important;
   width: 100%!important;
   transform: translate(0%, 0%)!important;
   border-radius: 0px!important;
